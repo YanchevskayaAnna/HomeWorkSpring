@@ -133,7 +133,6 @@ public class AdminController {
         studentDAO.deleteAll();
     }
 
-
     //GROUP
     public List<Group> getAllGroups() {
         return groupDAO.getAll();

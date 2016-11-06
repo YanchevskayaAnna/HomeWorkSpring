@@ -13,6 +13,8 @@ public class MyAspect {
 
     public void addAppender(){
 
+//  todo  налаштування брати із файла log4j.properties - там уже створений log4j.aspectLogger=INFO, aspect
+
         logger = Logger.getRootLogger();
         logger.setLevel(Level.INFO);
         PatternLayout layout = new PatternLayout("%d{ISO8601} [%t] %-5p %c %x - %m%n");
@@ -36,7 +38,7 @@ public class MyAspect {
         logger.info("After throwing " + proceedingJoinPoint.getSignature());
     }
 
-    public Object around(ProceedingJoinPoint joinPoint){
+    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         Object object = null;
         try {
             before(joinPoint);
@@ -45,6 +47,7 @@ public class MyAspect {
             afterReturning(joinPoint);
         } catch (Throwable throwable) {
             afterThrowing(joinPoint);
+            throw throwable;
         }
 
         return object;

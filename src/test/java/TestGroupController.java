@@ -39,17 +39,17 @@ public class TestGroupController {
 
     }
 
-    @After
-    public void afterTest() {
-
-        groupController.deleteAllMarks();
-        groupController.deleteAllStudents();
-        groupController.deleteAllGroupsFromSubjects();
-        groupController.deleteAllSubjectsFromGroups();
-        groupController.deleteAllGroups();
-        groupController.deleteAllSubjects();
-
-    }
+//    @After
+//    public void afterTest() {
+//
+//        groupController.deleteAllMarks();
+//        groupController.deleteAllStudents();
+//        groupController.deleteAllGroupsFromSubjects();
+//        groupController.deleteAllSubjectsFromGroups();
+//        groupController.deleteAllGroups();
+//        groupController.deleteAllSubjects();
+//
+//    }
 
     private List<Mark> createMarks(List<Student> students, List<Subject> subjects) {
 
@@ -162,116 +162,116 @@ public class TestGroupController {
 
         return groupController.getAllSubjects();
     }
-
+//
     @Test
     public void getAllGroups() {
         List<Group> groupList = groupController.getAllGroups();
         Assert.assertNotNull(groupList);
     }
-
-    @Test
-    public void getGroupByID() {
-
-        List<Group> groupList = groupController.getAllGroups();
-        Group group = groupController.getGroupById(groupList.get(groupList.size() - 1).getId());
-        Assert.assertNotNull(group);
-    }
-
-    @Test
-    public void updateGroupsInfo() {
-
-        List<Group> groupList = groupController.getAllGroups();
-        int id = groupList.get(groupList.size() - 1).getId();
-        Group groupBeforeUpdate = groupController.getGroupById(id);
-
-        String newName = "Middles";
-        String oldName = groupBeforeUpdate.getName();
-        groupBeforeUpdate.setName(newName);
-
-        groupController.updateGroup(groupBeforeUpdate);
-        Group groupAfterUpd = groupController.getGroupById(id);
-        Assert.assertEquals(groupBeforeUpdate.getId(), groupAfterUpd.getId());
-        Assert.assertEquals(groupBeforeUpdate.getName(), groupAfterUpd.getName());
-
-        groupBeforeUpdate.setName(oldName);
-        groupController.updateGroup(groupBeforeUpdate);
-    }
-
-    @Test
-    public void deleteGroup() {
-
-        Group testGroup = new Group();
-        testGroup.setName("test group");
-        groupController.createGroup(testGroup);
-
-        Group deleteGroup = groupController.getGroupById(testGroup.getId());
-        groupController.deleteGroup(deleteGroup);
-
-        Assert.assertFalse(groupController.getAllGroups().contains(testGroup));
-
-    }
-
-    @Test
-    public void createGroup() {
-
-        Group group = new Group();
-        group.setName("Test2390");
-
-        Assert.assertNotNull(groupController.createGroup(group));
-        groupController.deleteGroup(group);
-    }
-
-    @Test
-    public void getAllGroupsFromResultSet() {
-        Subject subjectJava = new Subject();
-        subjectJava.setId(1);
-        subjectJava.setName("java");
-        List<Group> groupList = groupController.getAllGroupsWithSubject(subjectJava, 0, 20);
-        Assert.assertNotNull(groupList);
-    }
-
-    @Test
-    public void getAverageMarks() {
-        Map<Student, Integer> groupList = groupController.getAverageRating();
-        Assert.assertEquals(4, groupList.size());
-    }
-
-    @Test
-    public void getAverageRatingSubject() {
-
-        Subject subjectJava = new Subject();
-        subjectJava.setName("java");
-        Subject subjectCSS = new Subject();
-        subjectCSS.setName("css");
-        Assert.assertEquals(10, groupController.getAverageRating(subjectJava));
-        Assert.assertEquals(13, groupController.getAverageRating(subjectCSS));
-
-    }
-
-    @Test
-    public void getAverageRatingGroup() {
-
-        Group group1 = new Group();
-        group1.setName("ACP14");
-
-        Group group2 = new Group();
-        group2.setName("ACP11");
-
-        Assert.assertEquals(8, groupController.getAverageRatingGroup(group1));
-        Assert.assertEquals(15, groupController.getAverageRatingGroup(group2));
-    }
-
-    @Test
-    public void getAverageRatingSubjectGroup() {
-
-        Subject subjectJava = new Subject();
-        subjectJava.setName("java");
-
-        Group groupACP14 = new Group();
-        groupACP14.setName("ACP14");
-
-        Assert.assertEquals(5, groupController.getAverageRating(subjectJava, groupACP14));
-    }
-
-
+//
+//    @Test
+//    public void getGroupByID() {
+//
+//        List<Group> groupList = groupController.getAllGroups();
+//        Group group = groupController.getGroupById(groupList.get(groupList.size() - 1).getId());
+//        Assert.assertNotNull(group);
+//    }
+//
+//    @Test
+//    public void updateGroupsInfo() {
+//
+//        List<Group> groupList = groupController.getAllGroups();
+//        int id = groupList.get(groupList.size() - 1).getId();
+//        Group groupBeforeUpdate = groupController.getGroupById(id);
+//
+//        String newName = "Middles";
+//        String oldName = groupBeforeUpdate.getName();
+//        groupBeforeUpdate.setName(newName);
+//
+//        groupController.updateGroup(groupBeforeUpdate);
+//        Group groupAfterUpd = groupController.getGroupById(id);
+//        Assert.assertEquals(groupBeforeUpdate.getId(), groupAfterUpd.getId());
+//        Assert.assertEquals(groupBeforeUpdate.getName(), groupAfterUpd.getName());
+//
+//        groupBeforeUpdate.setName(oldName);
+//        groupController.updateGroup(groupBeforeUpdate);
+//    }
+//
+//    @Test
+//    public void deleteGroup() {
+//
+//        Group testGroup = new Group();
+//        testGroup.setName("test group");
+//        groupController.createGroup(testGroup);
+//
+//        Group deleteGroup = groupController.getGroupById(testGroup.getId());
+//        groupController.deleteGroup(deleteGroup);
+//
+//        Assert.assertFalse(groupController.getAllGroups().contains(testGroup));
+//
+//    }
+//
+//    @Test
+//    public void createGroup() {
+//
+//        Group group = new Group();
+//        group.setName("Test2390");
+//
+//        Assert.assertNotNull(groupController.createGroup(group));
+//        groupController.deleteGroup(group);
+//    }
+//
+//    @Test
+//    public void getAllGroupsFromResultSet() {
+//        Subject subjectJava = new Subject();
+//        subjectJava.setId(1);
+//        subjectJava.setName("java");
+//        List<Group> groupList = groupController.getAllGroupsWithSubject(subjectJava, 0, 20);
+//        Assert.assertNotNull(groupList);
+//    }
+//
+//    @Test
+//    public void getAverageMarks() {
+//        Map<Student, Integer> groupList = groupController.getAverageRating();
+//        Assert.assertEquals(4, groupList.size());
+//    }
+//
+//    @Test
+//    public void getAverageRatingSubject() {
+//
+//        Subject subjectJava = new Subject();
+//        subjectJava.setName("java");
+//        Subject subjectCSS = new Subject();
+//        subjectCSS.setName("css");
+//        Assert.assertEquals(10, groupController.getAverageRating(subjectJava));
+//        Assert.assertEquals(13, groupController.getAverageRating(subjectCSS));
+//
+//    }
+//
+//    @Test
+//    public void getAverageRatingGroup() {
+//
+//        Group group1 = new Group();
+//        group1.setName("ACP14");
+//
+//        Group group2 = new Group();
+//        group2.setName("ACP11");
+//
+//        Assert.assertEquals(8, groupController.getAverageRatingGroup(group1));
+//        Assert.assertEquals(15, groupController.getAverageRatingGroup(group2));
+//    }
+//
+//    @Test
+//    public void getAverageRatingSubjectGroup() {
+//
+//        Subject subjectJava = new Subject();
+//        subjectJava.setName("java");
+//
+//        Group groupACP14 = new Group();
+//        groupACP14.setName("ACP14");
+//
+//        Assert.assertEquals(5, groupController.getAverageRating(subjectJava, groupACP14));
+//    }
+//
+//
 }
