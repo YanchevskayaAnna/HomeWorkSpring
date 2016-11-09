@@ -25366,3 +25366,426 @@ Caused by: java.lang.IllegalArgumentException: warning no match for this type na
 2016-11-05 22:36:36 INFO  root:34 - After returning List service.AdminController.getAllGroups()
 2016-11-05 22:36:36 INFO  GenericApplicationContext:960 - Closing org.springframework.context.support.GenericApplicationContext@1bce4f0a: startup date [Sat Nov 05 22:36:23 EET 2016]; root of context hierarchy
 2016-11-05 22:36:36 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-07 22:48:03 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@626b2d4a: startup date [Mon Nov 07 22:48:03 EET 2016]; root of context hierarchy
+2016-11-07 22:48:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 22:48:05 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 22:48:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 22:48:06 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 22:48:06 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 22:48:06 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 22:48:06 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 22:48:06 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 22:48:07 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 22:48:08 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 22:48:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 22:48:11 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 22:48:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 22:48:14 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 22:48:14 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 22:48:15 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 22:48:16 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 22:48:16 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 22:48:16 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:48:16 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:48:16 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 22:48:16 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 22:48:16 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:48:16 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:48:16 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 22:48:16 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 22:48:16 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:48:16 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:48:16 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 22:48:16 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 22:48:16 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 22:48:16 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 22:48:16 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 22:48:16 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 22:48:16 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 22:48:16 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 22:48:16 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 22:48:16 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 22:48:16 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:48:16 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:48:16 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 22:49:43 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 22:49:43 EET 2016]; root of context hierarchy
+2016-11-07 22:49:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 22:49:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 22:49:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 22:49:45 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 22:49:46 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 22:49:46 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 22:49:46 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 22:49:46 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 22:49:46 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 22:49:48 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 22:49:48 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 22:49:48 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 22:49:48 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 22:49:49 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 22:49:49 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 22:49:49 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 22:49:49 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 22:49:49 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 22:49:49 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:49:49 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:49:49 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 22:49:49 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 22:49:49 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:49:49 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:49:49 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 22:49:49 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 22:49:49 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:49:49 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:49:49 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 22:49:49 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 22:49:49 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 22:49:49 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 22:49:49 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 22:49:49 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 22:49:49 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 22:49:49 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 22:49:49 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 22:49:49 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 22:49:49 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:49:49 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:49:49 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 22:52:12 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 22:52:12 EET 2016]; root of context hierarchy
+2016-11-07 22:52:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 22:52:14 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 22:52:15 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 22:52:15 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 22:52:15 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 22:52:15 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 22:52:15 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 22:52:15 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 22:52:16 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 22:52:17 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 22:52:18 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 22:52:18 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 22:52:18 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 22:52:18 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 22:52:18 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 22:52:18 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 22:52:19 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 22:52:19 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 22:52:19 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:52:19 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:52:19 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 22:52:19 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 22:52:19 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:52:19 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:52:19 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 22:52:19 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 22:52:19 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:52:19 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:52:19 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 22:52:19 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 22:52:19 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 22:52:19 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 22:52:19 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 22:52:19 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 22:52:19 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 22:52:19 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 22:52:19 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 22:52:19 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 22:52:19 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:52:19 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:52:19 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 22:53:00 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 22:53:00 EET 2016]; root of context hierarchy
+2016-11-07 22:53:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 22:53:01 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 22:53:02 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 22:53:02 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 22:53:04 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 22:53:04 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 22:53:04 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 22:53:04 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 22:53:04 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 22:53:06 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 22:53:07 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 22:53:07 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 22:53:07 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 22:53:08 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 22:53:08 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 22:53:08 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 22:53:08 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 22:53:08 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 22:53:08 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:53:08 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:53:08 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 22:53:08 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 22:53:08 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:53:08 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:53:08 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 22:53:08 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 22:53:08 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:53:08 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:53:08 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 22:53:08 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 22:53:08 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 22:53:08 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 22:53:08 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 22:53:08 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 22:53:08 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 22:53:08 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 22:53:08 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 22:53:08 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 22:53:08 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:53:08 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:53:08 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 22:53:28 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 22:53:28 EET 2016]; root of context hierarchy
+2016-11-07 22:53:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 22:53:29 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 22:53:30 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 22:53:30 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 22:53:30 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 22:53:30 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 22:53:30 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 22:53:30 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 22:53:30 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 22:53:31 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 22:53:32 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 22:53:33 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 22:53:33 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 22:53:33 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 22:53:33 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 22:53:33 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 22:53:33 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 22:53:33 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 22:53:33 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:53:33 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:53:33 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 22:53:33 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 22:53:33 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:53:33 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 22:53:33 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 22:53:33 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 22:53:33 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:53:33 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 22:53:33 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 22:53:33 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 22:53:33 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 22:53:33 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 22:53:33 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 22:53:33 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 22:53:33 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 22:53:33 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 22:53:33 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 22:53:33 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 22:53:33 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 22:53:33 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 22:53:33 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 23:01:43 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 23:01:43 EET 2016]; root of context hierarchy
+2016-11-07 23:01:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 23:01:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 23:01:46 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 23:01:46 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 23:01:47 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 23:01:47 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 23:01:47 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 23:01:47 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 23:01:47 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 23:01:48 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 23:01:49 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 23:01:49 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 23:01:49 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 23:01:49 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 23:01:49 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 23:01:51 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 23:01:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 23:01:51 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 23:01:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 23:01:51 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 23:01:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 23:01:51 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 23:01:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 23:01:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 23:01:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 23:01:51 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 23:01:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 23:01:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 23:01:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 23:01:51 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 23:01:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 23:01:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 23:01:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 23:01:51 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 23:01:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 23:01:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 23:01:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 23:01:51 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 23:01:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 23:01:51 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 23:01:51 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 23:02:42 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 23:02:42 EET 2016]; root of context hierarchy
+2016-11-07 23:02:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 23:02:43 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 23:02:44 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 23:02:44 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 23:02:44 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 23:02:44 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 23:02:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 23:02:44 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 23:02:45 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 23:02:46 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 23:02:47 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 23:02:47 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 23:02:47 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 23:02:50 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 23:02:50 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 23:02:50 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 23:02:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 23:02:51 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 23:02:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 23:02:51 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 23:02:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 23:02:51 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 23:02:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 23:02:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 23:02:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 23:02:51 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 23:02:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 23:02:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 23:02:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 23:02:51 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 23:02:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 23:02:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 23:02:51 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 23:02:51 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 23:02:51 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 23:02:51 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 23:02:52 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 23:02:52 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 23:02:52 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 23:02:52 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 23:02:52 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 23:29:13 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2038ae61: startup date [Mon Nov 07 23:29:13 EET 2016]; root of context hierarchy
+2016-11-07 23:29:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-07 23:29:15 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-07 23:29:15 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-07 23:29:16 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-07 23:29:16 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-07 23:29:16 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-07 23:29:16 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-07 23:29:16 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-07 23:29:16 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-07 23:29:18 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-07 23:29:19 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-07 23:29:19 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-07 23:29:19 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-07 23:29:20 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-07 23:29:20 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-07 23:29:20 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-07 23:29:20 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-07 23:29:20 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-07 23:29:20 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 23:29:20 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 23:29:20 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-07 23:29:20 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-07 23:29:20 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 23:29:20 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-07 23:29:20 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-07 23:29:20 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-07 23:29:20 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-07 23:29:20 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-07 23:29:20 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-07 23:29:20 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-07 23:29:20 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-07 23:29:20 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-07 23:29:20 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-07 23:29:20 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-07 23:29:20 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-07 23:29:20 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-07 23:29:20 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-07 23:29:20 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-07 23:29:20 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-07 23:29:20 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-07 23:29:20 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-07 23:43:34 INFO  root:26 - Before method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:43:34 INFO  root:30 - After method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:43:34 INFO  root:34 - After returning Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:46:16 INFO  root:26 - Before method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:46:16 INFO  root:30 - After method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:46:16 INFO  root:34 - After returning Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:53:46 INFO  root:26 - Before method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:53:46 INFO  root:30 - After method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:53:46 INFO  root:34 - After returning Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:58:04 INFO  root:26 - Before method Student service.AdminController.createStudent(Student)
+2016-11-07 23:58:05 INFO  root:30 - After method Student service.AdminController.createStudent(Student)
+2016-11-07 23:58:05 INFO  root:34 - After returning Student service.AdminController.createStudent(Student)
+2016-11-07 23:58:23 INFO  root:26 - Before method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:58:23 INFO  root:30 - After method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:58:23 INFO  root:34 - After returning Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:58:30 INFO  root:26 - Before method Student service.AdminController.createStudent(Student)
+2016-11-07 23:58:30 INFO  root:30 - After method Student service.AdminController.createStudent(Student)
+2016-11-07 23:58:30 INFO  root:34 - After returning Student service.AdminController.createStudent(Student)
+2016-11-07 23:59:41 INFO  root:26 - Before method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:59:41 INFO  root:30 - After method Student service.AdminController.getStudentById(Integer)
+2016-11-07 23:59:41 INFO  root:34 - After returning Student service.AdminController.getStudentById(Integer)
+2016-11-08 22:09:49 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@626b2d4a: startup date [Tue Nov 08 22:09:49 EET 2016]; root of context hierarchy
+2016-11-08 22:09:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-11-08 22:09:52 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2016-11-08 22:09:52 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-08 22:09:53 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-08 22:09:53 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2016-11-08 22:09:53 INFO  Version:41 - HHH000412: Hibernate Core {4.2.1.Final}
+2016-11-08 22:09:53 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-11-08 22:09:53 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2016-11-08 22:09:53 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-08 22:09:55 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-11-08 22:09:59 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-08 22:09:59 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-11-08 22:09:59 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-08 22:10:00 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-11-08 22:10:00 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-11-08 22:10:00 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-11-08 22:10:00 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.groups
+2016-11-08 22:10:00 INFO  TableMetadata:66 - HHH000037: Columns: [name, id]
+2016-11-08 22:10:00 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-08 22:10:00 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-08 22:10:00 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.learning
+2016-11-08 22:10:00 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, group_id]
+2016-11-08 22:10:00 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-08 22:10:00 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_f764ed595be34803bbbf971b5fd, fk_dd6b1e39499c4476b7e5f35bd71]
+2016-11-08 22:10:01 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.marks
+2016-11-08 22:10:01 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, student_id, id, value]
+2016-11-08 22:10:01 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_b7cbcdd52d64430cb3275c0df5a, fk_7600578622394f15a0480b77f75]
+2016-11-08 22:10:01 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_b7cbcdd52d64430cb3275c0df5a, primary, fk_7600578622394f15a0480b77f75]
+2016-11-08 22:10:01 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.students
+2016-11-08 22:10:01 INFO  TableMetadata:66 - HHH000037: Columns: [group_id, name, id]
+2016-11-08 22:10:01 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_3c69106b01db4d0a8dc5aa7cf43]
+2016-11-08 22:10:01 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_3c69106b01db4d0a8dc5aa7cf43, primary]
+2016-11-08 22:10:01 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.subjects
+2016-11-08 22:10:01 INFO  TableMetadata:66 - HHH000037: Columns: [subject_id, name, description, id]
+2016-11-08 22:10:01 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk_793e5e9f108e4a1ca60603c9cd4]
+2016-11-08 22:10:01 INFO  TableMetadata:69 - HHH000126: Indexes: [fk_793e5e9f108e4a1ca60603c9cd4, primary]
+2016-11-08 22:10:01 INFO  TableMetadata:65 - HHH000261: Table found: acp14jpa.teachers
+2016-11-08 22:10:01 INFO  TableMetadata:66 - HHH000037: Columns: [name, id, exp, subjectid]
+2016-11-08 22:10:01 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2016-11-08 22:10:01 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2016-11-08 22:10:01 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-11-08 22:29:28 INFO  root:26 - Before method List service.AdminController.getAllStudents()
+2016-11-08 22:29:29 INFO  root:30 - After method List service.AdminController.getAllStudents()
+2016-11-08 22:29:29 INFO  root:34 - After returning List service.AdminController.getAllStudents()
+2016-11-08 22:29:59 INFO  root:26 - Before method List service.AdminController.getAllStudents()
+2016-11-08 22:29:59 INFO  root:30 - After method List service.AdminController.getAllStudents()
+2016-11-08 22:29:59 INFO  root:34 - After returning List service.AdminController.getAllStudents()
