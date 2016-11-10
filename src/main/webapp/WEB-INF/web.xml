@@ -4,25 +4,25 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <listener>
-        <listener-class>
-            listener.InitSpringContextListener
-        </listener-class>
-    </listener>
+    <servlet>
 
-    <context-param>
-        <param-name>springLocation</param-name>
-        <param-value>app-context.xml</param-value>
-    </context-param>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <servlet-class>
+            com.sun.jersey.spi.container.servlet.ServletContainer
+        </servlet-class>
 
-    <filter>
-        <filter-name>LoggingFilter</filter-name>
-        <filter-class>filter.RequestLoggerFilter</filter-class>
-    </filter>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>rest</param-value>
+        </init-param>
 
-    <filter-mapping>
-        <filter-name>LoggingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </servlet>
+
+    <!-- localhost:8080/{app-name}/rest/user/get-->
+    <!-- localhost:8080/{app-name}/rest/application.wadl-->
+    <servlet-mapping>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
 
 </web-app>
